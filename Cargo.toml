@@ -1,0 +1,7 @@
+[workspace]
+members = [
+	"tasd-lib-traits",
+	"tasd-lib-macro",
+	"tasd-lib"
+]
+resolver = "2"
