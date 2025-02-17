@@ -93,6 +93,7 @@ create_parsers!(
     Unknown
 );
 
+#[derive(Debug)]
 pub struct TASD {
     pub header: Header,
     pub packets: Vec<Packet>,
@@ -118,7 +119,6 @@ impl Serializable for TASD {
         let mut current_input = input;
         loop {
             let (new_input, packet) = Packet::deserialize(current_input)?;
-            println!("{:?}", packet);
             packets.push(packet);
             if new_input.is_empty() {
                 break;
