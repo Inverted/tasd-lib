@@ -1,5 +1,5 @@
 use nom::IResult;
-use tasd_lib_traits::Serializable;
+pub use tasd_lib_traits::Serializable;
 
 use crate::header::Header;
 use crate::packets::general::attribution::Attribution;
